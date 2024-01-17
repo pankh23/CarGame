@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="text">Do you really wanna leave the game?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="rocket-league-icegif-3.gif">
+        </div>
+        <div class="button">
+            <button class="btn" id="no" onclick="nextPage()">No</button>
+            <button class="btn" id="yes" onmouseover="moveButton()">yes</button>
+            <script>
+                function nextPage(){
+                    window.location.href="yes.html";
+                }
+                function moveButton(){
+                    var x=Math.random() * (window.innerWidth - document.getElementById('yes').offsetWidth);
+                    var y=Math.random() * (window.innerHeight - document.getElementById('yes').offsetHeight);
+                    document.getElementById('yes').style.left=x+'px';
+                    document.getElementById('yes').style.top=y+'px';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
